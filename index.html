@@ -17,44 +17,49 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			min-height: 100vh;
-			background-color: #404040;
+			background-color: #2E2E2E; /* Dark gray background for dark mode */
+			overflow: auto;
 		}
+
 		.a4-paper {
-			width: 21cm;
-			height: 29.7cm;
+			width: 794px;
+			height: 1123px;
 			background: white;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			display: flex;
 			box-sizing: border-box;
 		}
+
 		.left-box {
-			width: 32%;
+			width: 250px;
 			background-color: #212A31;
-			padding: 1cm;
+			padding: 16px;
 			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
+
 		.circle {
-			width: 5cm;
-			height: 5cm;
+			width: 150px;
+			height: 150px;
 			border-radius: 50%;
 			overflow: hidden;
-			margin-bottom: 0.2cm;
+			margin-bottom: 16px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
+
 		.circle img {
-			width: 105%;
-			height: 105%;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
 		.text-content {
 			margin: 20px;
 			text-align: left;
+			padding-left: 25px;
 			width: 100%;
 			font-family: "Ubuntu", sans-serif;
 			color: white;
@@ -77,6 +82,7 @@
 		.contactinfo {
 			text-align: left;
 			width: 105%;
+			padding-left: 25px;
 			font-family: "Ubuntu", sans-serif;
 			color: white;
 			font-size: 16px;
@@ -169,13 +175,14 @@
 			font-weight: bold;
 		}
 		.button-container {
-			margin-top: 40px;
-			padding-left: 7px;
+			margin: 40px 0 0 50px;
 			display: flex;
 			width: 130%;
 			flex-wrap: wrap;
 			gap: 5px;
 			justify-content: left;
+			transform: scale(0.86); /* Scale down the container */
+			transform-origin: top left; /* Ensure it scales from the top-left corner */
 		}
 		.button-title {
 			font-size: 18px;
