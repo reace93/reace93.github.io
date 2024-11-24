@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A4 Paper Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			background-color: #404040;
+		}
+		.a4-paper {
+			width: 21cm;
+			height: 29.7cm;
+			background: white;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			display: flex;
+			box-sizing: border-box;
+		}
+		.left-box {
+			width: 32%;
+			background-color: #212A31;
+			padding: 1cm;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.circle {
+			width: 5cm;
+			height: 5cm;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-bottom: 0.2cm;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.circle img {
+			width: 105%;
+			height: 105%;
+			object-fit: cover;
+		}
+		.text-content {
+			margin: 20px;
+			text-align: left;
+			width: 100%;
+			font-family: "Ubuntu", sans-serif;
+			color: white;
+		}
+		.border {
+			margin: 40px 0;
+			border: 2px solid #376E6F;
+			width: 60px;
+			height: 1px;
+			border-radius: 20px;
+			background-color: #376E6F;
+		}
+		.text-content p {
+			font-size: 20px;
+			margin: 0px;
+		}
+		.text-content h1 {
+			margin: 10px 0px 6px;
+		}
+		.contactinfo {
+			text-align: left;
+			width: 105%;
+			font-family: "Ubuntu", sans-serif;
+			color: white;
+			font-size: 16px;
+		}
+		.contactinfo p {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.contactinfo .phone {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+		}
+		.contactinfo .email {
+			width: 20px;
+			height: 15px;
+			display: inline-block;
+		}
+		.contactinfo .linkedin {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			color: white;
+		}
+		.contactinfo a {
+			color: white;
+		}
+		.main-content {
+			width: 85%;
+			padding: 0.3cm 1cm 0 0.6cm;
+			box-sizing: border-box;
+			font-family: "Lato", sans-serif;
+			line-height: 1.6;
+		}
+		.main-content h3 {
+			margin: 20px 0 5px;
+		}
+		.main-content p {
+			margin: 1px 0;
+			font-size: 13px;
+			color: #333;
+		}
+		.dot {
+			font-size: 18px;
+			height: 5px;
+			color: #000;
+			margin: 10px 10px 0;
+			line-height: 0px;
+			flex-shrink: 0;
+		}
+		.vejledning {
+			display: flex;
+		}
+		.timeline {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: relative;
+		}
+		.timeline li {
+			position: relative;
+			margin: 0 0 15px;
+			padding-left: 30px;
+		}
+		.timeline .bullet {
+			position: absolute;
+			left: 0;
+			top: 7px;
+			width: 10px;
+			height: 10px;
+			background-color: #376E6F;
+			border-radius: 50%;
+			z-index: 1;
+		}
+		.timeline li:before {
+			content: '';
+			position: absolute;
+			left: 4px;
+			top: 16px;
+			width: 2px;
+			height: calc(100% + 10px);
+			background-color: #ddd;
+			z-index: 0;
+		}
+		.timeline li:last-child:before {
+			height: 0;
+		}
+		.role {
+			font-weight: bold;
+		}
+		.button-container {
+			margin-top: 40px;
+			padding-left: 7px;
+			display: flex;
+			width: 130%;
+			flex-wrap: wrap;
+			gap: 5px;
+			justify-content: left;
+		}
+		.button-title {
+			font-size: 18px;
+			font-weight: bold;
+			color: white;
+			margin: 0 0 10px 0;
+			width: 100%;
+			text-align: left;
+			font-family: "Ubuntu", sans-serif;
+		}
+		.button-container .btn {
+			flex: 0 1 30%;
+			padding: 10px;
+			font-size: 14px;
+			color: white;
+			background-color: #376E6F;
+			border: none;
+			border-radius: 5px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="a4-paper">
+		<div class="left-box">
+			<div class="circle">
+				<img src="C:\Users\Reace\Desktop\cvwebsite\cvpic.png" alt="Your Picture">
+			</div>
+			<div class="text-content">
+				<h1>Reace Erik Poulsen</h1>
+				<p>IT-Support og vejledning</p>
+			</div>
+			<div class="border"></div>
+			<div class="contactinfo">
+				<p><img src="phone-call.png" alt="Phone Icon" class="phone"> +45 53 85 99 20</p>
+				<p><img src="email-icon.png" alt="Email Icon" class="email"> rep93@outlook.dk</p>
+				<p><img src="linkedin-icon.png" alt="Email Icon" class="linkedin"><a href="https://www.linkedin.com/in/reace/" target="_blank" rel="noopener noreferrer">Linkedin/in/reace/</a></p>
+			</div>
+			<div class="border"></div>
+			<div class="button-container">
+				<p class="button-title">Kompetencer</p>
+				<button class="btn">Windows</button>
+				<button class="btn">MacOS</button>
+				<button class="btn">Linux</button>
+				<button class="btn">Android</button>
+				<button class="btn">iOS</button>
+				<button class="btn">Office365</button>
+				<button class="btn">Ticket</button>
+				<button class="btn">Hardwareekspertise</button>
+				<button class="btn">Rådgivning</button>
+				<button class="btn">Projektarbejde</button>
+				<button class="btn">Programmering</button>
+				<button class="btn">Azure</button>
+				<button class="btn">Telefonsupport</button>
+				<button class="btn">Design</button>
+				<button class="btn">Kommunikation</button>
+				<button class="btn">AI</button>
+			</div>
+		</div>
+		<div class="main-content">
+			<h3>Mål</h3>
+			<p>Serviceminded IT-supporter med solid erfaring inden for både 1st og 2nd line support på tværs af Windows, Linux og Mac. Jeg brænder for problemløsning og kundetilfredshed, og mit mål er altid at skabe en positiv oplevelse. Som person er jeg åben, imødekommende og detaljeorienteret. For mig handler IT ikke kun om teknologi – det handler lige så meget om mennesker. Jeg motiveres af at finde holdbare løsninger, der gør hverdagen lettere og mere effektiv.</p>
+			<h3>Erfaring</h3>
+			<ul class="timeline">
+				<li>
+					<div class="bullet"></div>
+					<p>2022 – nuv.</p>
+					<p class="role">IT-supporter @ Syddansk Universitet Odense</p>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Levering af 1st-line support gennem telefon-, ticket- og skranke-henvendelser.</p>
+					</div>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Ydelse af support til administrative medarbejdere, forskere, undervisere og studerende.</p>
+					</div>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Installation og fejlfinding på hardware og software, på computere og laboratorieudstyr, i operativsystemerne Windows, Linux og MacOS.</p>
+					</div>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Ekspertise i Microsofts produkter, som Office365, Outlook, OneDrive, Teams, Sharepoint og MFA.</p>
+					</div>
+					<p><span class="dot">&#8226;</span> Support og udarbejdelse af guides til bla. Microsoft produkter</p>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Vejledning og rådgivning omkring køb af computer, tilbehør og hardwarekomponenter.</p>
+					</div>
+					<div class="vejledning">
+						<span class="dot">&#8226;</span>
+						<p>Ansvarlig for indførelse og opsætning af udstyrregistreringssystem i brug af SDU IT.</p>
+					</div>
+					<p><span class="dot">&#8226;</span> Sidemandsoplæring af IT-supporterelev.</p>
+				</li>
+				<li>
+					<div class="bullet"></div>
+					<p>2021 – 2022</p>
+					<p class="role">IT-supporter @ IBA Erhvervsakademi Kolding</p>
+				</li>
+				<li>
+					<div class="bullet"></div>
+					<p>2018 – 2021</p>
+					<p class="role">IT-supportelev @ Syddansk Universitet Odense</p>
+				</li>
+			</ul>
+			<h3>Uddannelse</h3>
+			<ul class="timeline">
+				<li>
+					<div class="bullet"></div>
+					<p>2018 – 2020</p>
+					<p class="role">Data og kommunikation @ Syddansk Erhvervsskole</p>
+					<p><span class="dot">&#8226;</span> Konfigurering og opsætning af IT-Udstyr</p>
+					<p><span class="dot">&#8226;</span> Opsætning af Netværk (Cisco)</p>
+					<p><span class="dot">&#8226;</span> Windows Server 2016 (AD, GPO, DNS)</p>
+					<p><span class="dot">&#8226;</span> Linux (Ubuntu, Apache, Raspberry Pi)</p>
+					<p><span class="dot">&#8226;</span> Database og programmering (PHP)</p>
+				</li>
+				<li>
+					<div class="bullet"></div>
+					<p>2017 – 2018</p>
+					<p class="role">Webudvikling @ Erhvervsakademiet Lillebælt</p>
+				</li>
+				<li>
+					<div class="bullet"></div>
+					<p>2014 – 2016</p>
+					<p class="role">Multimediedesigner @ IBA Erhvervsakademi Kolding</p>
+				</li>
+				<li>
+					<div class="bullet"></div>
+					<p>2011 – 2014</p>
+					<p class="role">Teknisk studentereksamen – HTX @ Hansenberg Kolding</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
