@@ -12,7 +12,8 @@
 	<title>A4 Paper Website</title>
 	<style>
 		body {
-			margin-top: 50px;
+		margin: 0;
+			top: 0;
 			padding: 0;
 			display: flex;
 			align-items: center;
@@ -28,6 +29,12 @@
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			display: flex;
 			box-sizing: border-box;
+		}
+		
+		@media screen and (max-width: 810px), screen and (max-height: 1151px) {
+			.a4-paper {
+				transform: scale(0.7);
+			}
 		}
 
 		.left-box {
@@ -112,7 +119,7 @@
 			color: white;
 		}
 		.main-content {
-			width: 85%;
+			width: 630px;
 			padding: 0.3cm 1cm 0 0.6cm;
 			box-sizing: border-box;
 			font-family: "Lato", sans-serif;
